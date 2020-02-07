@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formularios</title>
+</head>
+<body>
+    <form method="POST" action="formularios.php">
+        <p>Input tipo texto</p>
+        <input type="text">
+        <br>
+
+        <p>Input tipo number</p>
+        <input type="number" max="10" min="0">
+        <br>
+
+        <p>Input tipo fecha</p>
+        <input type="date">
+        <br>
+
+        <p>Input tipo number</p>
+        <input type="checkbox">
+        <br>
+
+        <select>
+            <option name="tipo_sangre" value="1">O+</option>
+            <option name="tipo_sangre" value="2">O-</option>
+        </select>
+
+        <br>
+        <input list="lista" type="text">
+        <datalist id="lista">
+            <option>Elemento 1</option>
+            <option>Objeto 2</option>
+            <option>Cosa 3</option>
+        </datalist>
+
+        <br>
+        <input type="submit" value="Submit">
+
+        <br>
+        <?php
+            if(isset($_POST['tipo_sangre'])){
+                echo $_POST['tipo_sangre']);
+            }
+        ?>
+    </form>
+</body>
+</html>
